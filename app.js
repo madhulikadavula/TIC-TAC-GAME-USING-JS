@@ -1,5 +1,5 @@
 let boxes=document.querySelectorAll(".box");
-let restbtn=document.querySelector("#reset");
+let resetbtn=document.querySelector("#reset");
 let newGameBtn=document.querySelector("#new-btn");
 let msgContainer=document.querySelector(".msg-container");
 let msg=document.querySelector("#msg");
@@ -35,14 +35,13 @@ const enableBoxes=()=>{
     for(let box of boxes)
     {
         box.disabled=false;
-        msgContainer.classList.add("hide");
+        box.innerText="";
     }
 }
 const disableBoxes=()=>{
     for(let box of boxes)
     {
         box.disabled=true;
-        box.innerText="";
     }
 }
 const showWinner = (winner) => {
@@ -68,7 +67,8 @@ const checkWinner=()=>{
 const resetGame=()=>{
     turnO=true;
     enableBoxes();
+    msgContainer.classList.add("hide");
 };
 
 newGameBtn.addEventListener("click", resetGame);
-resetBtn.addEventListener("click", resetGame);
+resetbtn.addEventListener("click", resetGame);

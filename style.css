@@ -11,7 +11,7 @@ body {
  height: 70vh;
  display :flex;
     justify-content: center;
-    align-items;
+    align-items:center;
     gap:1.5vmin;
 }
 .game {
@@ -20,7 +20,7 @@ body {
     display :flex;
     flex-wrap:wrap;
     justify-content: center;
-    align-items;
+    align-items:center;
     gap:1.5vmin;
 }
 .box{
@@ -55,7 +55,12 @@ body {
 }
 
 .msg-container{
-    height:30vmin ;
+    height:100vmin ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:4rem;
 }
 
 .hide{
